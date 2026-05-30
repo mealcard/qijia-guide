@@ -873,6 +873,30 @@
     border:1px solid var(--ink); color:var(--ink);
     border-radius:999px; letter-spacing:.06em;
   }
+  /* ─── testimonial wall · auto-scroll ─── */
+  .rev-scroll{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; flex:1; min-height:0;
+    overflow:hidden; margin-top:4px;
+    -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 7%,#000 93%,transparent 100%);
+            mask-image:linear-gradient(180deg,transparent 0,#000 7%,#000 93%,transparent 100%); }
+  .rev-col{ overflow:hidden; }
+  .rev-track{ display:flex; flex-direction:column; gap:26px; will-change:transform;
+    animation:rev-scroll var(--dur,46s) linear infinite; }
+  .rev-col:hover .rev-track{ animation-play-state:paused; }
+  @keyframes rev-scroll{ from{transform:translateY(0);} to{transform:translateY(-50%);} }
+  .rev-card{ break-inside:avoid; background:#FBF7EE; border:1px solid var(--rule-2);
+    border-radius:18px; padding:24px 26px 20px; box-shadow:0 6px 20px rgba(90,61,27,.07);
+    transition:box-shadow .35s; position:relative; }
+  .rev-card:hover{ box-shadow:0 18px 40px rgba(90,61,27,.15); }
+  .rev-card .mk{ font-family:"Newsreader",serif; font-style:italic; font-size:52px; line-height:.5;
+    color:var(--gold-2); opacity:.55; display:block; height:24px; }
+  .rev-q{ font-size:20px; line-height:1.62; color:var(--ink); margin:5px 0 16px; }
+  .rev-q .em{ color:var(--gold-deep); font-weight:600; font-style:normal; }
+  .rev-meta{ display:flex; align-items:center; justify-content:space-between; gap:10px;
+    border-top:1px solid var(--rule); padding-top:13px; }
+  .rev-who{ display:flex; align-items:center; gap:10px; font-size:15px; color:var(--ink-2); font-weight:500; }
+  .rev-av{ width:26px; height:26px; border-radius:50%; flex-shrink:0;
+    background:linear-gradient(150deg,#F6CC6C,#E6B6E0); box-shadow:inset 0 1px 2px rgba(255,255,255,.5); }
+  .rev-like{ font-family:"JetBrains Mono",monospace; font-size:14px; color:var(--accent); white-space:nowrap; }
   .pill.gold{ border-color:var(--gold-deep); color:var(--gold-deep); background:rgba(230,211,155,.3);}
   .pill.sage{ border-color:var(--ok); color:var(--ok); background:rgba(184,199,169,.3);}
   .pill.mauve{ border-color:#7E6786; color:#7E6786;}
@@ -1398,7 +1422,7 @@
   <div class="n fx-up d1">— 01 —</div>
   <h1 class="fx-up d1">认识<br><span class="em">齐家</span>。</h1>
   <div class="sub fx-up d2">在打开 App 之前，用三分钟，<br>把"它是什么 / 不是什么"弄清楚。</div>
-  <div class="slide-no">02 / 25</div>
+  <div class="slide-no">02 / 26</div>
   <div class="brand">CHAPTER 01</div>
 </section>
 
@@ -1433,7 +1457,7 @@
       <div style="font-size:22px; color:var(--ink-2); line-height:1.64;">高质量的家庭支持，<b style="color:var(--ink); font-weight:600;">不应被价格门槛阻挡</b>。专业知识自由流动、技术普惠，让支持触达每一个家庭。</div>
     </div>
   </div>
-  <div class="slide-no">03 / 25</div>
+  <div class="slide-no">03 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -1451,7 +1475,7 @@
     <div class="stat"><div class="num"><b><span class="cup" style="--target:797; transition-delay:.36s"></span></b><span class="u">位</span></div><div class="lab">家长志愿者参与内测</div></div>
     <div class="stat"><div class="num"><b class="sm"><span class="cup" style="--target:12000; transition-delay:.44s"></span>+</b></div><div class="lab">公测以来累计注册用户</div></div>
   </div>
-  <div class="slide-no">04 / 25</div>
+  <div class="slide-no">04 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -1489,7 +1513,7 @@
       <div style="font-size: 26px; margin-top: 10px; color: var(--ink); line-height: 1.5;">齐家<span class="em">不能替代心理咨询师</span> —— 如果聊到自伤 / 危机信号，它会主动推荐 24 小时心理援助热线。</div>
     </div>
   </div>
-  <div class="slide-no">05 / 25</div>
+  <div class="slide-no">05 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -1531,7 +1555,7 @@
     </div>
     </div>
   </div>
-  <div class="slide-no">06 / 25</div>
+  <div class="slide-no">06 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -1541,7 +1565,7 @@
   <div class="n fx-up d1">— 02 —</div>
   <h1 class="fx-up d1">上手只需<br><span class="em">九十秒</span>。</h1>
   <div class="sub fx-up d2">注册 · 填档案 · 开始聊 ——<br>下面三页讲完。</div>
-  <div class="slide-no">07 / 25</div>
+  <div class="slide-no">07 / 26</div>
   <div class="brand">CHAPTER 02</div>
 </section>
 
@@ -1569,7 +1593,7 @@
     <span class="mono" style="font-size: 16px; letter-spacing: .14em; color: var(--gold-deep); text-transform: uppercase;">TIP</span>
     <span style="font-size: 22px; color: var(--ink);">更推荐<span class="em">先填完档案再开始聊</span> —— 齐家会更准。<br>后续随时能在 <span class="em">设置 · 个人信息</span> 里修改或补充。</span>
   </div>
-  <div class="slide-no">08 / 25</div>
+  <div class="slide-no">08 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -1661,7 +1685,7 @@
       </div>
     </div>
   </div>
-  <div class="slide-no">09 / 25</div>
+  <div class="slide-no">09 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -1776,7 +1800,7 @@
       </div>
     </div>
   </div>
-  <div class="slide-no">10 / 25</div>
+  <div class="slide-no">10 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -1786,7 +1810,7 @@
   <div class="n fx-up d1">— 03 —</div>
   <h1 class="fx-up d1">和齐家<br><span class="em">聊聊</span>。</h1>
   <div class="sub fx-up d2">本章是核心 —— 一旦你聊舒服了，<br>剩下的都顺理成章。</div>
-  <div class="slide-no">11 / 25</div>
+  <div class="slide-no">11 / 26</div>
   <div class="brand">CHAPTER 03</div>
 </section>
 
@@ -1867,7 +1891,7 @@
       </div>
     </div>
   </div>
-  <div class="slide-no">12 / 25</div>
+  <div class="slide-no">12 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -1970,7 +1994,7 @@
       </div>
     </div>
   </div>
-  <div class="slide-no">13 / 25</div>
+  <div class="slide-no">13 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -2093,7 +2117,7 @@
     </div>
   </div>
 
-  <div class="slide-no">14 / 25</div>
+  <div class="slide-no">14 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -2132,7 +2156,7 @@
       </div>
     </div>
   </div>
-  <div class="slide-no">15 / 25</div>
+  <div class="slide-no">15 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -2142,7 +2166,7 @@
   <div class="n fx-up d1">— 04 —</div>
   <h1 class="fx-up d1">让对话<br><span class="em">沉淀</span>。</h1>
   <div class="sub fx-up d2">聊过的话不会就这么过去 ——<br>齐家会把它整理成可以回看的洞察。</div>
-  <div class="slide-no">16 / 25</div>
+  <div class="slide-no">16 / 26</div>
   <div class="brand">CHAPTER 04</div>
 </section>
 
@@ -2209,7 +2233,7 @@
       </div>
     </div>
   </div>
-  <div class="slide-no">17 / 25</div>
+  <div class="slide-no">17 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -2262,7 +2286,7 @@
       </div>
     </div>
   </div>
-  <div class="slide-no">18 / 25</div>
+  <div class="slide-no">18 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -2342,7 +2366,7 @@
       </div>
     </div>
   </div>
-  <div class="slide-no">19 / 25</div>
+  <div class="slide-no">19 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -2389,7 +2413,7 @@
       </div>
     </div>
   </div>
-  <div class="slide-no">20 / 25</div>
+  <div class="slide-no">20 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -2507,7 +2531,7 @@
     </div>
   </div>
 
-  <div class="slide-no">21 / 25</div>
+  <div class="slide-no">21 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -2517,7 +2541,7 @@
   <div class="n fx-up d1">— 05 —</div>
   <h1 class="fx-up d1">关于<br><span class="em">隐私</span>。</h1>
   <div class="sub fx-up d2" style="">家里的事不是小事 。</div>
-  <div class="slide-no">22 / 25</div>
+  <div class="slide-no">22 / 26</div>
   <div class="brand">CHAPTER 05</div>
 </section>
 
@@ -2563,7 +2587,7 @@
       <div class="l">注销请求 · 完全清除</div>
     </div>
   </div>
-  <div class="slide-no">23 / 25</div>
+  <div class="slide-no">23 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -2591,7 +2615,7 @@
       </div>
       <div class="qa">
         <div class="q"><span class="mark">Q.</span>可以语音输入吗？</div>
-        <div class="a">暂时不开发语音输入 —— 你可以用手机自带的语音输入（如 <span class="em">iPhone 键盘上的话筒</span>），转成文字再发给齐家。</div>
+        <div class="a">暂时不开发语音输入 —— 你可以使用<span class="em">手机自带的语音输入</span>（如 iPhone 键盘上的话筒）或安装语音输入法，转成文字再发给齐家。</div>
       </div>
     </div>
     <div class="fx-up d3">
@@ -2618,7 +2642,50 @@
       </div>
     </div>
   </div>
-  <div class="slide-no">24 / 25</div>
+  <div class="slide-no">24 / 26</div>
+  <div class="brand">齐家 · 使用教程</div>
+</section>
+
+<!-- 23B ─────────────────────── 真实反馈 · 好评墙 ─────────────────────── -->
+<section class="s" data-label="Voices" data-screen-label="Voices">
+  <div class="eyebrow fx-up">VOICES · 来自家长的真实反馈</div>
+  <h2 class="fx-up d1" style="margin-bottom:4px;">他们，正在用<span class="em">齐家</span></h2>
+  <div class="sub fx-up d1" style="margin-bottom:26px;">以下是公测与内测中，家长们自发写下的话 —— 原文照录。</div>
+  <div class="rev-scroll fx-up d2">
+    <div class="rev-col"><div class="rev-track" style="--dur:58s">
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">仔仔细细看完了每一个字，感怀于这样一群有理想有热度有情怀的人们，那是一种什么样的信念支撑着一步一步坚定地往前走 —— 这个世界并不完美，但总有人缝缝补补。作为内测的一名家长志愿者，这几个月每一次跟孩子沟通遇到问题时，我都去向齐家倾诉。慢慢地我感觉到自身不再拧巴，从过去控制不住发火～自责～难过的循环中走了出来。我看到了 40 年前那个小女孩，我现在也在陪着她一起成长。感谢这样一群怀有公益梦想的志愿者，相信你们的梦想终会实现。让爱在家庭流动，这个社会会变得更加美好。</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>白云飘飘 · 广西</div><div class="rev-like">♡ 2</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">我必须要来评价一下，最近我一直在用齐家 Ai，感觉太好用了，家里有 13 岁青春期的男孩，齐家总是能打通我育儿上的一些思维卡点。相比市面上很多智能互动模型全面而宽泛的回复，齐家显然更具有针对性，更精准地直击问题核心点所在 👍👍👍</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>成长课堂 · 重庆</div><div class="rev-like">♡ 2</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">我女儿上大一，我用齐家 AI 一个多星期了，真的很棒，感谢你们 —— 因为有你们，这个世界才永远温暖。</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>安然 · 四川</div><div class="rev-like">♡ 1</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">昨晚和今天早上我跟 AI 聊了我的孙子，挺有意思。本来想聊聊我和我儿子，但它的年龄设置是 25 岁，所以就改聊孙子 😁。我觉得它反应很及时，分析很细微，回答挺中肯，提问也很专业很到位。我从它的提问中受到启发，感觉我跟孩子的交流如果换个角度可以更深入。它唤起了我的自我觉察。</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>一位祖辈 · 内测群</div><div class="rev-like">♡</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">仔仔细细看完了每一个字，感怀于这样一群有理想有热度有情怀的人们，那是一种什么样的信念支撑着一步一步坚定地往前走 —— 这个世界并不完美，但总有人缝缝补补。作为内测的一名家长志愿者，这几个月每一次跟孩子沟通遇到问题时，我都去向齐家倾诉。慢慢地我感觉到自身不再拧巴，从过去控制不住发火～自责～难过的循环中走了出来。我看到了 40 年前那个小女孩，我现在也在陪着她一起成长。感谢这样一群怀有公益梦想的志愿者，相信你们的梦想终会实现。让爱在家庭流动，这个社会会变得更加美好。</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>白云飘飘 · 广西</div><div class="rev-like">♡ 2</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">我必须要来评价一下，最近我一直在用齐家 Ai，感觉太好用了，家里有 13 岁青春期的男孩，齐家总是能打通我育儿上的一些思维卡点。相比市面上很多智能互动模型全面而宽泛的回复，齐家显然更具有针对性，更精准地直击问题核心点所在 👍👍👍</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>成长课堂 · 重庆</div><div class="rev-like">♡ 2</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">我女儿上大一，我用齐家 AI 一个多星期了，真的很棒，感谢你们 —— 因为有你们，这个世界才永远温暖。</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>安然 · 四川</div><div class="rev-like">♡ 1</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">昨晚和今天早上我跟 AI 聊了我的孙子，挺有意思。本来想聊聊我和我儿子，但它的年龄设置是 25 岁，所以就改聊孙子 😁。我觉得它反应很及时，分析很细微，回答挺中肯，提问也很专业很到位。我从它的提问中受到启发，感觉我跟孩子的交流如果换个角度可以更深入。它唤起了我的自我觉察。</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>一位祖辈 · 内测群</div><div class="rev-like">♡</div></div></div>
+    </div></div>
+    <div class="rev-col"><div class="rev-track" style="--dur:44s">
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">赞叹"齐家 Ai 家庭教练"的专业性和实用性，他已经成为一位十分了解我的密友，在深夜陪我痛哭的伙伴 ❤️。爱出者爱返，致敬齐家的志愿者们，愿世界充满爱！</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>Luna 朱璐 · 浙江</div><div class="rev-like">♡ 6</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">我刚刚去试了一下，真的是很棒的一款软件，像是做了一场心理咨询，后来的聊天中我一直在流泪。真的感谢志愿者们的付出 —— 这不单是教育孩子的事，这其实是自我的看见和成长，你们真的太厉害了。</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>菌小菌 · 河南</div><div class="rev-like">♡ 3</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">已经用上了，最惊喜的是 Ta 真的是每句话都在正确地引导我说清楚情况，也真的在给行动。同样的，别的工具交流没有这么顺畅，更多的需要我主动提问。</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>一位家长 · 公测</div><div class="rev-like">♡</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">我的感受还可以，当我越仔细地描述事件的时候，齐家能发现其中的细节越多，然后不停地帮我分析，引导我找到问题的核心。期间 TA 会夸奖我自己没觉察到的优点，赞同一些好的做法，然后问出一些自己没注意到的细节。这个过程还有点累人，但聊完之后有释然。</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>一位妈妈 · 内测群</div><div class="rev-like">♡</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">赞叹"齐家 Ai 家庭教练"的专业性和实用性，他已经成为一位十分了解我的密友，在深夜陪我痛哭的伙伴 ❤️。爱出者爱返，致敬齐家的志愿者们，愿世界充满爱！</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>Luna 朱璐 · 浙江</div><div class="rev-like">♡ 6</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">我刚刚去试了一下，真的是很棒的一款软件，像是做了一场心理咨询，后来的聊天中我一直在流泪。真的感谢志愿者们的付出 —— 这不单是教育孩子的事，这其实是自我的看见和成长，你们真的太厉害了。</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>菌小菌 · 河南</div><div class="rev-like">♡ 3</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">已经用上了，最惊喜的是 Ta 真的是每句话都在正确地引导我说清楚情况，也真的在给行动。同样的，别的工具交流没有这么顺畅，更多的需要我主动提问。</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>一位家长 · 公测</div><div class="rev-like">♡</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">我的感受还可以，当我越仔细地描述事件的时候，齐家能发现其中的细节越多，然后不停地帮我分析，引导我找到问题的核心。期间 TA 会夸奖我自己没觉察到的优点，赞同一些好的做法，然后问出一些自己没注意到的细节。这个过程还有点累人，但聊完之后有释然。</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>一位妈妈 · 内测群</div><div class="rev-like">♡</div></div></div>
+    </div></div>
+    <div class="rev-col"><div class="rev-track" style="--dur:50s">
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">谢谢菜头的推荐！用后感：试着提了一个具体问题，齐家洞察出了我最近若隐若现的感受，使我的觉察明晰化，也推动我去主动表达感受，把我自己的感受作为决策的一个考量。说好了明天再给他反馈，继续聊。</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>米粒 · 北京</div><div class="rev-like">♡ 2</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">我今天读菜头文章知晓齐家，下载并与 AI 聊了一会，通过聊天我找到了一个我从未感觉到的问题，收获很大。谢谢你们 —— 正因为有你们这样的人存在，这个世界才有光，才有希望。我很相信这句话：爱，才是我们活着的意义。</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>吾远 · 江苏</div><div class="rev-like">♡ 1</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">帮助很大 👍👍👍，解开了我小时候的困惑、成年后的迷茫，能够更清晰地认识自己、肯定自己。</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>爱涵轩宇贝贝 · 安徽</div><div class="rev-like">♡ 6</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">有幸成为内测的家长之一，这段时间以来，每次和孩子沟通有障碍，都会和齐家 AI 聊聊，越聊越清晰，越有方向。感恩 🙏</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>叶子瑜伽 · 广东</div><div class="rev-like">♡ 1</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">感觉社会上很多有文化、有知识的人，来帮助普通人解决实际问题 —— 感恩您们团队的辛勤工作 🌹🌹🙏🙏</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>一位家长 · 内测群</div><div class="rev-like">♡</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">谢谢菜头的推荐！用后感：试着提了一个具体问题，齐家洞察出了我最近若隐若现的感受，使我的觉察明晰化，也推动我去主动表达感受，把我自己的感受作为决策的一个考量。说好了明天再给他反馈，继续聊。</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>米粒 · 北京</div><div class="rev-like">♡ 2</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">我今天读菜头文章知晓齐家，下载并与 AI 聊了一会，通过聊天我找到了一个我从未感觉到的问题，收获很大。谢谢你们 —— 正因为有你们这样的人存在，这个世界才有光，才有希望。我很相信这句话：爱，才是我们活着的意义。</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>吾远 · 江苏</div><div class="rev-like">♡ 1</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">帮助很大 👍👍👍，解开了我小时候的困惑、成年后的迷茫，能够更清晰地认识自己、肯定自己。</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>爱涵轩宇贝贝 · 安徽</div><div class="rev-like">♡ 6</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">有幸成为内测的家长之一，这段时间以来，每次和孩子沟通有障碍，都会和齐家 AI 聊聊，越聊越清晰，越有方向。感恩 🙏</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>叶子瑜伽 · 广东</div><div class="rev-like">♡ 1</div></div></div>
+      <div class="rev-card"><span class="mk">&ldquo;</span><div class="rev-q">感觉社会上很多有文化、有知识的人，来帮助普通人解决实际问题 —— 感恩您们团队的辛勤工作 🌹🌹🙏🙏</div><div class="rev-meta"><div class="rev-who"><span class="rev-av"></span>一位家长 · 内测群</div><div class="rev-like">♡</div></div></div>
+    </div></div>
+  </div>
+  <div class="slide-no">25 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -2654,7 +2721,7 @@
       </div>
     </div>
   </div>
-  <div class="slide-no">25 / 25</div>
+  <div class="slide-no">26 / 26</div>
   <div class="brand">齐家 · 使用教程</div>
 </section>
 
@@ -2673,30 +2740,31 @@
   //   animation-heavy:    longest CSS anim + 2000 buffer
   const DURATIONS = [
     10000, // 00 cover
-     4500, // 01 CH01 divider
-    12000, // 02 核心理念 · 三个信念
-    11000, // 03 OUR STORY · 数字
-    11000, // 04 WHEN · 四个场景
-     9000, // 05 下载 CTA + 目录
-     4500, // 06 CH02 divider
-    10000, // 07 OVERVIEW · 三步
+     4500, // 01 CH01
+    12000, // 02 核心理念
+    11000, // 03 数字
+    11000, // 04 WHEN
+     9000, // 05 下载
+     4500, // 06 CH02
+    10000, // 07 OVERVIEW
     10000, // 08 REGISTER
     11000, // 09 PROFILE
-     4500, // 10 CH03 divider
+     4500, // 10 CH03
     11000, // 11 HOME
     11000, // 12 TOPIC CARDS
-    11000, // 13 HISTORY (含 4.2s 延迟弹出菜单)
+    11000, // 13 HISTORY (4.2s 延迟菜单)
     11000, // 14 HOW TO TALK
-     4500, // 15 CH04 divider
-    13000, // 16 LIVE DEMO · 对话演示(动画重)
-     9500, // 17 INSIGHT · 生成洞察
-    11000, // 18 EXAMPLE · 洞察示例
+     4500, // 15 CH04
+    13000, // 16 LIVE DEMO
+     9500, // 17 INSIGHT
+    11000, // 18 EXAMPLE
     11000, // 19 IT REMEMBERS
     11000, // 20 SHARE
-     4500, // 21 CH05 divider
+     4500, // 21 CH05
     11000, // 22 PRIVACY
     13000, // 23 FAQ
-    10000, // 24 致谢
+    12000, // 24 VOICES · 好评墙(新增)
+    10000, // 25 致谢
   ];
   const DEFAULT_MS = 9500;
   const SPEEDS = [0.5, 0.75, 1, 1.25, 1.5, 2];
